@@ -2,8 +2,9 @@ import { useState, useRef } from "react";
 import { InputSection } from "./components/InputSection";
 import { VideoCard, type VideoInfo } from "./components/VideoCard";
 import { DownloadOptions } from "./components/DownloadOptions";
-import { CloudLightning } from "lucide-react";
 import { ProgressModal } from "./components/ProgressModal";
+
+import { Header } from "./components/Header";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -142,19 +143,17 @@ function App() {
       <div className="fixed top-[-20%] left-[20%] w-[500px] h-[500px] rounded-full bg-indigo-500/5 blur-[120px] pointer-events-none" />
       <div className="fixed bottom-[-10%] right-[10%] w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-4xl flex flex-col items-center animate-fadeInUp">
-        <header className="mb-12 text-center">
-          <div className="w-20 h-20 mx-auto mb-6 bg-white/5 backdrop-blur-3xl rounded-[2rem] flex items-center justify-center border border-white/10 shadow-2xl">
-            <CloudLightning size={36} className="text-white opacity-90" />
-          </div>
+      <Header />
 
-          <h1 className="text-5xl md:text-6xl font-semibold text-white mb-4 tracking-tight drop-shadow-sm">
-            Media Fetcher
+      <div className="relative z-10 w-full max-w-4xl flex flex-col items-center animate-fadeInUp">
+        <div className="mb-12 text-center space-y-4">
+          <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/60 tracking-tight drop-shadow-sm pb-2">
+            Download Anything.
           </h1>
-          <p className="text-white/50 text-xl font-medium tracking-wide">
-            Ultra-fast YouTube Downloader
+          <p className="text-white/60 text-xl md:text-2xl font-light tracking-wide max-w-2xl mx-auto">
+            Save high-quality videos and audio from YouTube instantly.
           </p>
-        </header>
+        </div>
 
         <InputSection
           url={url}
