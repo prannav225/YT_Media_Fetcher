@@ -3,6 +3,7 @@ import { InputSection } from "./components/InputSection";
 import { VideoCard, type VideoInfo } from "./components/VideoCard";
 import { DownloadOptions } from "./components/DownloadOptions";
 import { ProgressModal } from "./components/ProgressModal";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Header } from "./components/Header";
 
@@ -142,6 +143,8 @@ function App() {
       {/* Subtle Background Glow for IOS feel */}
       <div className="fixed top-[-20%] left-[20%] w-[500px] h-[500px] rounded-full bg-indigo-500/5 blur-[120px] pointer-events-none" />
       <div className="fixed bottom-[-10%] right-[10%] w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-[100px] pointer-events-none" />
+
+      <Analytics />
 
       <Header />
 
